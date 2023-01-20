@@ -358,6 +358,7 @@ section {
 }
 .stat-title::before{
     content: '';
+    position: absolute;
     left: 50%;
     top: 0;
     width: 40%;
@@ -421,6 +422,221 @@ h5{
 }
 
 
+/* portfolio */
+.port-text{
+    padding: 2rem 0;
+    text-align: center;
+    grid-gap: 2rem;
+    margin-top: 2rem;
+}
+.portfolios{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 4rem;
+    margin-top: 2rem;
+    
+}
+.portfolio-item{
+    position:relative;
+}
+.port-img{
+    width:100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 8px;
+    
+}
+.hover-item{
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-secondary);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transform: scale(0);
+    transition: all .4s ease-in-out;
+}
+h3{
+    font-size: 1.2rem;
+    color: var(--color-white);
+    align-items: center;
+}
+
+.icons1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.icon{
+    background-color:var(--color-grey-5);
+    
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.2rem;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    font-size: 1.5rem;
+    color: var(--color-white);
+    
+    
+}
+.icon:hover{
+ background-color: var(--color-white);
+
+}
+.hover:i{
+    color: var(--color-primary);
+}
+
+  .portfolio-item:hover .hover-item{
+    opacity: 1;
+    transform: scale(1);
+  }  
+
+
+/* blogs section*/
+.blogs11{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-top: 4rem;
+}
+
+.blog1{
+    position: relative;
+    background-color:rgba(36, 31, 31, 0.281);
+    border-radius: 5px;
+    box-shadow: 1px 1px 20px rgba(0,0,0,.1);
+    transition: all .4s ease-in-out;
+
+}
+.blog1:hover{
+    box-shadow: 1px 1px 20px rgba(0,0,0,.3);
+    transition: all .4s ease-in-out;
+    transform: translateY(-5px);
+
+}
+.blog1:img{
+    filter: grayscale(100%);
+    transform: scale(1.4);
+    box-shadow: 0px 4px 20px rgba(0,0,0,.8);
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: all .4s ease-in-out;
+}
+.blog-text1{
+    margin-top: -7px;
+    padding: 1rem;
+    border-top: 8px solid var(--color-secondary);
+
+}
+.blog-text1:h4{
+    font-size: 1rem;
+    margin-bottom: .7rem;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+}
+
+.blog-text1:h4::hover{
+    color: var(--color-secondary);
+}
+.blog-text1:p{
+    color: var(--color-grey-2);
+    line-height: 2rem;
+    padding-bottom: 1rem;
+}
+
+/*contact*/
+.contact-content-con{
+    display: flex;
+    padding: 3rem;
+    color: var(--color-grey-3);
+
+}
+.left-contact{
+    flex: 1;
+}
+.left-contact:h4{
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.left-contact:p{
+    margin: 1rem 0;
+    line-height: 1rem;
+}
+
+.contact-info{
+    display: flex;
+    align-items: left;
+    justify-content:space-between;
+    margin: 1rem 0 !important;
+    padding: 0 !important;
+}
+.icon2{
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.contact-icon{
+    display: flex;
+    margin-top: 2rem;
+    
+}
+
+
+.right-contact{
+    flex: 4;
+    margin-left: 3rem;
+    margin-right: 3rem;
+
+}
+.input-control2{
+    border-radius: 20px;
+    margin: 2rem 0;
+    font-weight: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    padding: .8rem 1.1rem;
+    outline: none;
+    border: none;
+    background-color:var(--color-grey-2);
+    width: 100%;
+    height: 100%;
+    color:#6c7983;
+    resize: none;
+    
+    
+}
+
+.submit-btn{
+    display: flex;
+    justify-content: center;
+    color:var(--color-grey-3);
+    width: 100%;
+    
+
+}
+
+   
+
+
  .btn-con{
     display: flex;
     align-self: flex-start;
@@ -467,7 +683,9 @@ h5{
     transform: translateX(0);
     transition: all .4s ease-out;
  }
-
+ .prtf{
+    color: var(--color-secondary);
+ }
  .main-title{
     text-align: center;
  }
