@@ -40,10 +40,6 @@
 }
 
 
-
-
-
-
 body {
     background-color:var(--color-primary) ;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -112,7 +108,16 @@ section {
  }
  .active{
     display: block;
-    animation: translate 50px;
+    animation: scaleAnim 1s ease-in-out;
+    @keyframes scaleAnim {
+        0%{
+            transform: translateY(-100%) scaleY(0)
+        }
+        100%{
+            transform: translateY(0) scaleY(1)
+        }
+        
+    }
     
 }
  
@@ -156,11 +161,12 @@ section {
         
     }
     
+    /*header-content*/
   .header-content{
-    display: grid;
+    display: flex;
     
     height: 100%;
-    width: fit-content;
+    
   }
   .left-header{
     display: flex;
@@ -169,27 +175,47 @@ section {
   }
   .h-shape{
     transition: all .4s ease-in-out;
-    width: 100%;
+    width: 45%;
     height: 100%;
-    
+    background-color: var(--color-secondary);
     position: absolute;
     left: 0;
-    top: 0;
+    top:1;
     z-index: -1;
-    clip-path: polygon(0 0, 46% 0, 79% 100%,0%,100%);
+    clip-path: polygon(0 0, 60% 0, 79% 100%, 0% 100%);
+    
   }
   
-  
+  .image1{
+    border-radius: var(--br-sm-2);
+    height: 90%;
+    width: 60%;
+    margin-left: 4rem;
+    background-color:var(--color-grey-3);
+    transition: all .4s ease-in-out;
+  }
+
+  .image1{
+    width: 62%;
+    height: 80%;
+    object-fit: cover;
+    transition: all .4s ease-in-out;
+    filter: grayscale(100%);
+
+  }
+  .image1:hover{
+    filter:grayscale(0);
+  }
 
   .right-header{
     display:inline-flex;
     flex-direction: column;
-    justify-content:left;
-    padding-right: 10rem;
-    margin-right: 20px;
+    justify-content:center;
+    padding-right: 12rem;
+  
 
   }
-  .name{
+  .name1{
     font-size: 2.5rem;
     
   }
